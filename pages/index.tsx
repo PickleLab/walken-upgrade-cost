@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 import { useState } from "react";
 import { Input } from "../components/Input";
@@ -131,7 +132,7 @@ export default function Home() {
             <h1 className="header__title">Upgrade Cost Calculator</h1>
           </div>
           <div className="w-full">
-            <img src="/img/pig-2x.png" className="w-80 mx-auto" />
+            <Image width={384} height={384} alt="CAThlete Upgrade" src="/img/pig-2x.png" className="mx-auto" />
             <div className="bg-white flex flex-col lg:flex-row lg:space-x-4 py-2 px-4 justify-center rounded-xl">
               <Input
                 type="number"
@@ -171,15 +172,15 @@ export default function Home() {
             </div>
             {!!cost.wlkn && (
               <div className="result" id="result">
-                <div>You'll need</div>
+                <div>You&lsquo;ll need</div>
                 <div className="bg-secondary/25 text-secondary p-2 rounded-lg text-center font-semibold w-full">
-                  <img className="h-6 w-6 inline mr-2" src="/img/gem.svg" />
+                  <Image height={24} width={24} alt="GEM" className="inline mr-2" src="/img/gem.svg" />
                   <span className="result__item__value">{cost.gems}</span>{" "}
                   <span className="result__item__title">Gem(s)</span>
                 </div>
                 <div className="hidden lg:inline">and</div>
                 <div className="bg-primary/25 text-primary p-2 rounded-lg text-center font-semibold w-full">
-                  <img className="h-6 w-6 inline mr-2" src="/img/walken.svg" />
+                  <Image height={24} width={24} alt="WLKN" className="inline mr-2" src="/img/walken.svg" />
                   <span className="result__item__value">{cost.wlkn}</span>{" "}
                   <span className="result__item__title">WLKN</span>{" "}
                 </div>
